@@ -28,7 +28,7 @@ const fetchPokemon = async (pokemon) => {
     pokemonnunber.innerHTML = '';
     pokemonName.innerHTML = '';
     pokemonImage.style.display = 'none';
-
+    
   }
 }
 const renderPokemon = async (pokemon) => {
@@ -40,6 +40,7 @@ const renderPokemon = async (pokemon) => {
     pokemonImage.src = data['sprites'] ['versions']['generation-v']['black-white']['animated']  ['front_default'];
     imput.value = '';
     searchPokemon = data.id;
+    x.play();
  
   }
   
@@ -47,7 +48,7 @@ const renderPokemon = async (pokemon) => {
 // função para buscar o pokemon
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  x.play();
+  
    renderPokemon(imput.value.toLowerCase());
   
 }
